@@ -6,20 +6,20 @@ export const betaFormSchema = z.object({
   }),
   grade: z.string().min(1, "학년을 선택해주세요."),
   isInternationalSchool: z.enum(["yes", "no"], {
-    required_error: "해당 여부를 선택해주세요.",
+    error: "해당 여부를 선택해주세요.",
   }),
   biggestChallenge: z.string().min(5, "5자 이상 입력해주세요."),
   vocabularyProblem: z.enum(["yes", "no", "unsure"], {
-    required_error: "공감 여부를 선택해주세요.",
+    error: "공감 여부를 선택해주세요.",
   }),
   betaIntent: z.enum(["yes", "maybe", "no"], {
-    required_error: "참여 의사를 선택해주세요.",
+    error: "참여 의사를 선택해주세요.",
   }),
   priceAcceptable: z.enum(["yes", "lower", "consult"], {
-    required_error: "가격 의향을 선택해주세요.",
+    error: "가격 의향을 선택해주세요.",
   }),
   preferredPrice: z.enum(["free", "under50k", "under100k", "over100k"], {
-    required_error: "적정 가격대를 선택해주세요.",
+    error: "적정 가격대를 선택해주세요.",
   }),
   reportItems: z.array(z.string()).min(1, "1개 이상 선택해주세요."),
   contact: z.string().min(1, "연락처 또는 이메일을 입력해주세요."),
