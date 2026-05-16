@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const betaFormSchema = z.object({
   userType: z.enum(["parent", "student"], {
-    required_error: "학부모/학생 구분을 선택해주세요.",
+    error: "학부모/학생 구분을 선택해주세요.",
   }),
   grade: z.string().min(1, "학년을 선택해주세요."),
   isInternationalSchool: z.enum(["yes", "no"], {
